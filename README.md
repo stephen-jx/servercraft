@@ -6,7 +6,6 @@
 
 - 🖥️ **服务器管理** - 添加服务器、检测系统信息、批量操作
 - 📦 **组件安装** - 38+ 组件，支持并行安装、依赖处理
-- 🔒 **安全加固** - SSH 加固、防火墙配置、认证保护
 - ⚙️ **系统配置** - 软件源、时区、DNS、内核参数
 - 📊 **实时日志** - WebSocket 推送安装进度
 - 🔐 **认证系统** - JWT Token 认证
@@ -57,7 +56,6 @@ docker-compose up -d
 ### 系统基础 (21个)
 - 软件源配置: apt/yum, pip, npm, Docker, Maven
 - 系统设置: 时区, 主机名, DNS, NTP, 字符集
-- 安全配置: SSH 加固, 防火墙, Fail2ban, SELinux
 - 性能调优: 内核参数, ulimit, Swap
 
 ### 数据库 (4个)
@@ -98,19 +96,8 @@ servercraft/
 │   ├── Dockerfile
 │   └── package.json
 ├── docker-compose.yml
-├── SECURITY_AUDIT.md        # 安全审计报告
 └── README.md
 ```
-
-## 安全
-
-详见 [SECURITY_AUDIT.md](./SECURITY_AUDIT.md)
-
-- ✅ API 认证保护
-- ✅ 组件名称白名单验证
-- ✅ CORS 来源限制
-- ✅ 注册限制（仅首用户）
-- ✅ JWT + bcrypt
 
 ## 环境变量
 
