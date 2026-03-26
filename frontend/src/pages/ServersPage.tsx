@@ -354,7 +354,7 @@ const InstallForm = ({ serverId, serverOs, onSuccess }: InstallFormProps) => {
   const [searchText, setSearchText] = useState('')
   const [selected, setSelected] = useState<string[]>([])
   const [favorites, setFavorites] = useState<string[]>(() => {
-    const saved = localStorage.getItem('envinit-favorites')
+    const saved = localStorage.getItem('servercraft-favorites')
     return saved ? JSON.parse(saved) : []
   })
 
@@ -369,7 +369,7 @@ const InstallForm = ({ serverId, serverOs, onSuccess }: InstallFormProps) => {
       ? favorites.filter(f => f !== name)
       : [...favorites, name]
     setFavorites(newFavorites)
-    localStorage.setItem('envinit-favorites', JSON.stringify(newFavorites))
+    localStorage.setItem('servercraft-favorites', JSON.stringify(newFavorites))
   }
 
   const filteredComponents = components.filter(comp => {

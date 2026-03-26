@@ -37,7 +37,7 @@ const ComponentsPage = () => {
   const [search, setSearch] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [favorites, setFavorites] = useState<string[]>(() => {
-    const saved = localStorage.getItem('envinit-favorites')
+    const saved = localStorage.getItem('servercraft-favorites')
     return saved ? JSON.parse(saved) : []
   })
 
@@ -54,7 +54,7 @@ const ComponentsPage = () => {
       ? favorites.filter(f => f !== name)
       : [...favorites, name]
     setFavorites(newFavorites)
-    localStorage.setItem('envinit-favorites', JSON.stringify(newFavorites))
+    localStorage.setItem('servercraft-favorites', JSON.stringify(newFavorites))
   }
 
   const filteredComponents = components.filter(
